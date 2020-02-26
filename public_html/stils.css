@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   display: flex;
-  background: #060AB2;
+  background: #061AB2;
 }
 
 .RV1G-atminas-spele {
@@ -24,8 +24,5 @@ body {
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
-  transform: scale(1);
-  transform-style: preserve-3d;
-  transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  
 }
