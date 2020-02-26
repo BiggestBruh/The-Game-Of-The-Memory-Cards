@@ -33,9 +33,9 @@ body {
 
 
 .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
+  width: 100px;
+  height: 150px;
+  margin: 20px;
   position: relative;
   
 }
