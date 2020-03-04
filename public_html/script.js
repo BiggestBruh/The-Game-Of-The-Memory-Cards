@@ -35,7 +35,6 @@ function generate(){
 function sizeup(){
     i=i+1;
     j=j+1;
-    divs.parentNode.remove();
     generate();
 }
 function sizedown(){
