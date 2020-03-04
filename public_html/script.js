@@ -26,7 +26,8 @@ function generate(){
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
             pic.style.width = "100px";
-            pic.style.height = "100px";
+            pic.style.height = "150px";
+            pic.style.margin = "25px";
             divs.appendChild(pic);
             document.getElementById("forma").appendChild(divs);
             }
