@@ -17,16 +17,16 @@
     ];
     let pics = [];
     
-    function shuffle(array) {
-    var currI = array.length, tempVal, randI;
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
-    while (0 !== currI) {
+    while (0 !== currentIndex) {
 
-        randI = Math.floor(Math.random() * currI);
-        currI -= 1;
-        temVal = array[currI];
-        array[currI] = array[randI];
-        array[randI] = tempVal;
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
 
     return array;
@@ -79,6 +79,10 @@ function generate(w, h){
             document.getElementById("atminas-spele").appendChild(divs);
         }
     }
+}
+
+function makegrid(){
+    
 }
 
 
