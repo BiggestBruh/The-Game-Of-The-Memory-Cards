@@ -34,8 +34,8 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        let el = document.getElementsByClassName('sbutton');
-        el.remove();
+        let el = document.getElementsByClassName("sbutton");
+        el.document.removeChild(el);
         };
         sizemed.onclick=()=>{
         generate(5, 4);
