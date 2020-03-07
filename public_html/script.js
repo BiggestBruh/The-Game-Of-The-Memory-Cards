@@ -34,17 +34,17 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        let el = document.getElementById("sbutton");
+        let el = document.getElementByClassName("sbutton");
         el.removeChild();
         };
         sizemed.onclick=()=>{
         generate(5, 4);
-        let el = document.getElementById("sbutton");
+        let el = document.getElementByClassName("sbutton");
         el.removeChild();
         };
         sizelarg.onclick=()=>{
         generate(6, 5);
-        let el = document.getElementById("sbutton");
+        let el = document.getElementByClassName("sbutton");
         el.removeChild();
         };
     });
