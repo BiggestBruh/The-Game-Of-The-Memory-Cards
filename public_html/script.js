@@ -35,10 +35,10 @@ function generate(w, h){
             let image = document.createElement("IMG");
             image.src = "img/" + pics[index] + ".jpg";
             image.style = "width:100%; height:100%";
-            cardIn.addEventListener('click', function () {
-                let cond = document.getElementsByClassName('flipped')
-                if(!cardIn.classList.contains('flipped') && !cardIn.classList.contains('fixed') && cond.length<2) {
-                    cardIn.classList.toggle('flipped');
+            innercard.addEventListener('click', function () {
+                let cond = document.getElementsByClassName('flipped');
+                if(!innercard.classList.contains('flipped') && !innercard.classList.contains('fixed') && cond.length<2) {
+                    innercard.classList.toggle('flipped');
                     setTimeout(Match(),10);
                 }
             });
