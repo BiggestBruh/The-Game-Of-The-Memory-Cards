@@ -42,10 +42,10 @@ function generate(w, h){
             let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flip-card-front");
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
-            pic.style = "width:100%; height:100%";
+            pic.style = "width:100px; height:100px";
             let image = document.createElement("IMG");
             image.src = "img/" + pics[index] + ".png";
-            image.style = "width:100%; height:100%";
+            image.style = "width:100px; height:100px";
             innercard.addEventListener('click', function () {
                 let cond = document.getElementsByClassName('flipped');
                 if(!innercard.classList.contains('flipped') && !innercard.classList.contains('fixed') && cond.length<2) {
