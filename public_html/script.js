@@ -17,6 +17,21 @@
     ];
     let pics = [];
     
+    function shuffle(array) {
+    var currI = array.length, tempVal, randI;
+
+    while (0 !== currI) {
+
+        randI = Math.floor(Math.random() * currI);
+        currI -= 1;
+        temVal = array[currI];
+        array[currI] = array[randI];
+        array[randI] = tempVal;
+    }
+
+    return array;
+}
+    
 
 function generate(w, h){
     pics = [];
