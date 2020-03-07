@@ -35,8 +35,6 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        let el = document.getElementById("RV1G-atminas-spele");
-        el.innerHTML = "";
         };
         sizemed.onclick=()=>{
         generate(5, 4);
@@ -47,7 +45,7 @@
     });
 
 function generate(w, h){
-    
+    document.getElementById("RV1G-atminas-spele").innerHTML = "";
     for (let temph=0; temph<h; temph++){
         let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
         for (let tempw=0; tempw<w; tempw++){
