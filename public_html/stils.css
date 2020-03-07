@@ -1,7 +1,7 @@
 
 .navbar {
   overflow: hidden;
-  background-color: #0535DF;
+  background-color: #161A35;
 }
 .navbar a {
   float: left;
@@ -14,7 +14,7 @@
 body {
   height: 100vh;
   display: flex;
-  background: #B6F2FB;
+  background: #061AB2;
 }
 
 .RV1G-atminas-spele {
