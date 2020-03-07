@@ -18,15 +18,15 @@
     let pics = [];
     
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var ci = array.length, tv, ri;
 
-    while (0 !== currentIndex) {
+    while (0 !== ci) {
 
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        ri = Math.floor(Math.random() * ci);
+        ci -= 1;
+        tv = array[ci];
+        array[ci] = array[ri];
+        array[ri] = tv;
     }
 
     return array;
