@@ -1,6 +1,3 @@
-    var i;
-    var j;
-    
     const picset = [
         "a",
         "b",
@@ -21,8 +18,11 @@
     
     window.addEventListener("load", function() {
         let sizesmal = document.createElement("BUTTON");
+        sizesmal.setAttribute("class", "sbutton");
         let sizemed = document.createElement("BUTTON");
+        sizemed.setAttribute("class", "sbutton");
         let sizelarg = document.createElement("BUTTON");
+        sizelarg.setAttribute("class", "sbutton");
         let textsmal = document.createTextNode("4 x 3");
         let textmed = document.createTextNode("5 x 4");
         let textlarg = document.createTextNode("6 x 5");
@@ -34,12 +34,18 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
+        let el = document.getElementById("sbutton");
+        el.removeChild();
         };
         sizemed.onclick=()=>{
         generate(5, 4);
+        let el = document.getElementById("sbutton");
+        el.removeChild();
         };
         sizelarg.onclick=()=>{
         generate(6, 5);
+        let el = document.getElementById("sbutton");
+        el.removeChild();
         };
     });
 
