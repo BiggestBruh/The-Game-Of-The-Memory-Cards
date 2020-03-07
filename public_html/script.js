@@ -17,9 +17,6 @@
     ];
     let pics = [];
     
-    window.addEventListener("load", function() {
-        generate(4, 3);
-    });
 
 function generate(w, h){
     document.getElementById("atminas-spele").innerHTML = "";
@@ -29,7 +26,7 @@ function generate(w, h){
         for (let tempw=0; tempw<w; tempw++){
             let card = document.createElement("DIV"); card.setAttribute("class","flip");
             let innercard = document.createElement("DIV"); innercard.setAttribute("class", "flipinner");
-            inndercard.classList.add(pics[index].substring(0, pics[index].length - 1));
+            innercard.classList.add(pics[index].substring(0, pics[index].length - 1));
             let backcard = document.createElement("DIV"); backcard.setAttribute("class", "flipback");
             let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flip-card-front");
             let pic = document.createElement("IMG");
