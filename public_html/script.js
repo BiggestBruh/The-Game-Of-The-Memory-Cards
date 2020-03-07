@@ -21,7 +21,8 @@
 function generate(w, h){
     pics = [];
     let ps = picset.slice(0);
-     for (let i=0; i<w*h/2; i++) {
+     for (let i = 0; i < w*h / 2; i++) {
+         
         let r = Math.floor(Math.random() * ps.length);
         pics.push(ps[r] + "1");
         pics.push(ps[r] + "2");
@@ -41,10 +42,10 @@ function generate(w, h){
             let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flip-card-front");
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
-            pic.style = "width:100px; height:100px";
+            pic.style = "width:100%; height:100%";
             let image = document.createElement("IMG");
             image.src = "img/" + pics[index] + ".png";
-            image.style = "width:100px; height:100px";
+            image.style = "width:100%; height:100%";
             innercard.addEventListener('click', function () {
                 let cond = document.getElementsByClassName('flipped');
                 if(!innercard.classList.contains('flipped') && !innercard.classList.contains('fixed') && cond.length<2) {
@@ -52,8 +53,14 @@ function generate(w, h){
                     setTimeout(Match(),10);
                 }
             });
+            frontcard.appendChild(pic);
+            backcard.appendChild(image);
+            innercard.appendChild(backcard);
+            innercard.appendChild(frontcard);
+            card.appendChild(innercard);
+            divs.appendChild(card);
+            index++;
             
-            divs.appendChild(pic);
             document.getElementById("atminas-spele").appendChild(divs);
         }
     }
