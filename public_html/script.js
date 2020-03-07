@@ -43,8 +43,8 @@ function generate(){
         for (let tempi=0; tempi<i; tempi++){
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
-            pic.style.width = "100%";
-            pic.style.height = "150%";
+            pic.style.width = "10%";
+            pic.style.height = "15%";
             pic.style.margin = "25px";
             divs.appendChild(pic);
             document.getElementById("forma").appendChild(divs);
