@@ -34,20 +34,17 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        let el = document.getElementsByClassName("sbutton");
-        el.document.removeChild(el);
         };
         sizemed.onclick=()=>{
         generate(5, 4);
-        
         };
         sizelarg.onclick=()=>{
         generate(6, 5);
-        
         };
     });
 
 function generate(w, h){
+    document.getElementById("RV1G-atminas-spele").innerHTML = "";
     for (let temph=0; temph<h; temph++){
         let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
         for (let tempw=0; tempw<w; tempw++){
