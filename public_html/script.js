@@ -19,6 +19,16 @@
     
 
 function generate(w, h){
+    pics = [];
+    let ps = picset.slice(0);
+     for (let i=0; i<w*h/2; i++) {
+        let r = Math.floor(Math.random() * ps.length);
+        pics.push(ps[r] + "1");
+        pics.push(ps[r] + "2");
+        ps.splice(r, 1);
+    }
+//    pics = shuffle(pics);
+    //----------------------------------------
     document.getElementById("atminas-spele").innerHTML = "";
     let index = 0;
     for (let temph=0; temph<h; temph++){
