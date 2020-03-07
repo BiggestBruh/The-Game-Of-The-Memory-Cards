@@ -9,7 +9,7 @@ body {
 .RV1G-atminas-spele {
   width: 640px;
   height: 640px;
-  margin: auto;
+  margin: 15px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
