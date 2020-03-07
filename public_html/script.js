@@ -43,7 +43,7 @@ function generate(w, h){
         pics.push(ps[r] + "2");
         ps.splice(r, 1);
     }
-//    pics = shuffle(pics);
+    pics = shuffle(pics);
     //----------------------------------------
     document.getElementById("atminas-spele").innerHTML = "";
     let index = 0;
