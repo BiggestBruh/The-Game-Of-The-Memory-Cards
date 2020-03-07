@@ -35,7 +35,8 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        document.getElementById("RV1G-atminas-spele").innerHTML = "";
+        let el = document.getElementById("RV1G-atminas-spele");
+        el.innerHTML = "";
         };
         sizemed.onclick=()=>{
         generate(5, 4);
