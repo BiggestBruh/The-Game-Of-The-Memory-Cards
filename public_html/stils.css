@@ -14,14 +14,6 @@ body {
   flex-wrap: wrap;
   perspective: 1000px;
 }
-.setup {
-  width: 300px;
-  height: 100px;
-  margin: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  perspective: 1000px;
-}
 
 .mugura,
 .prieksa {

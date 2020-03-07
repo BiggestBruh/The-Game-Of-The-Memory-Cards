@@ -18,21 +18,21 @@
     
     window.addEventListener("load", function() {
         generate(4, 3);
-        let sizesmal = document.createElement("BUTTON");
-        sizesmal.setAttribute("class", "sbutton");
-        let sizemed = document.createElement("BUTTON");
-        sizemed.setAttribute("class", "sbutton");
-        let sizelarg = document.createElement("BUTTON");
-        sizelarg.setAttribute("class", "sbutton");
-        let textsmal = document.createTextNode("4 x 3");
-        let textmed = document.createTextNode("5 x 4");
-        let textlarg = document.createTextNode("6 x 5");
-        sizesmal.appendChild(textsmal);
-        sizemed.appendChild(textmed);
-        sizelarg.appendChild(textlarg);
-        document.getElementById("setup").appendChild(sizesmal);
-        document.getElementById("setup").appendChild(sizemed);
-        document.getElementById("setup").appendChild(sizelarg);
+//        let sizesmal = document.createElement("BUTTON");
+//        sizesmal.setAttribute("class", "sbutton");
+//        let sizemed = document.createElement("BUTTON");
+//        sizemed.setAttribute("class", "sbutton");
+//        let sizelarg = document.createElement("BUTTON");
+//        sizelarg.setAttribute("class", "sbutton");
+//        let textsmal = document.createTextNode("4 x 3");
+//        let textmed = document.createTextNode("5 x 4");
+//        let textlarg = document.createTextNode("6 x 5");
+//        sizesmal.appendChild(textsmal);
+//        sizemed.appendChild(textmed);
+//        sizelarg.appendChild(textlarg);
+//        document.getElementById("setup").appendChild(sizesmal);
+//        document.getElementById("setup").appendChild(sizemed);
+//        document.getElementById("setup").appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
         };
