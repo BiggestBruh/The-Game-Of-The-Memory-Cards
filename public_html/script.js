@@ -65,7 +65,7 @@ function generate(w, h){
                 let cond = document.getElementsByClassName('flipped');
                 if(!innercard.classList.contains('flipped') && !innercard.classList.contains('fixed') && cond.length<2) {
                     innercard.classList.toggle('flipped');
-                    setTimeout(Match(),10);
+                    setTimeout(match(),10);
                 }
             });
             frontcard.appendChild(pic);
@@ -81,8 +81,31 @@ function generate(w, h){
     }
 }
 
-function makegrid(){
+function match(){
+    let flips = document.getElementsByClassName("flipped");
     
+    if (flips.length > 1) {
+        let meme = testClass(flips[0]);
+        let pair = document.getElementsByClassName(meme);
+        if(pair[0].classList.contains("flipped") && pair[1].classList.contains("flipped")) {
+            setTimeout(function() {
+                pair[0].classList.add('fixed');
+                pair[1].classList.add('fixed');
+                pair[0].classList.toggle('flipped');
+                pair[1].classList.toggle('flipped');
+                checkWin();
+            }, 500);
+
+        } else {
+            setTimeout(function() {
+                const len = flips.length;
+                for(let j= 0; j < len; j++) {
+                    flips[0].classList.toggle('flipped');
+                }
+            }, 1000);
+        }
+
+    }
 }
 
 
