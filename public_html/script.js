@@ -1,6 +1,24 @@
     var i=4;
     var j=3;
     
+    const picset = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o"
+    ];
+    
     window.addEventListener("load", function() {
         let buttonup = document.createElement("BUTTON");
         let buttondown = document.createElement("BUTTON");
@@ -36,14 +54,18 @@ function generate(){
     }
 
 function sizeup(){
+    if (i<6){
     i=i+1;
     j=j+1;
     generate();
+    }
 }
 function sizedown(){
-    i=i-1;
-    j=j-1;
-    generate();
+    if (i>4){
+        i=i-1;
+        j=j-1;
+        generate();
+    }
 }
 
 
