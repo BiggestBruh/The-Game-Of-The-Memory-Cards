@@ -17,6 +17,9 @@
     ];
     let pics = [];
     
+    window.addEventListener("load", function() {
+        generate(4, 3);
+    });
 
 function generate(w, h){
     document.getElementById("atminas-spele").innerHTML = "";
