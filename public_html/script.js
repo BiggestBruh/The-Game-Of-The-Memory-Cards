@@ -118,5 +118,11 @@ function testClass(elem) {
     return value;
 }
 
+function checkWin() {
+    const guessed = document.getElementsByClassName('fixed');
+    if(guessed.length === blocks) {
+        alert("I hate Jojo's Bizarre Adventure. I immediately lose respect for anyone who watches it, and especially those who praise it. Here's why:<br>Name 20 successful people that watches it.Popular series basically run the show when it comes to anime.This includes shows like Dragon Ball Z, Bleach, Sailor Moon, Death Note, Attack On Titan, Sword Art Online, Love Live!, Nichijou, Clannad et al.Popular series has shows making significant contributions to the entire anime industry.<br>Jojo's Bizarre Adventure on the other hand pulls most of the heavy weight packaging from teenage angst with each season. They then lay basic fight scenes and a joke of a protagonist on it. It generally lags behind popular series by a mile or two in inventiveness. I never seen the show on TV or been mentioned by anyone over the age of 25.<br>So tell me again, how exactly do Jojo's Bizarre Adventure innovate? It's team even struggle to release a new theme with each season, and character design is about the only original thing with this show.<br>Yes, Jojo's Bizarre Adventure is stable because they are standing on the shoulders of socially awkward teenagers. Most of the hard work is hashed out before it's creators ever start making anime.This is fine, and what anime is all about, but I prefer to be in with the leaders rather than the followers.<br>What really irks me and what has really brewed my hatred are Jojo's Bizarre Adventure fans. They seem to think Jojo's Bizarre Adventure is responsible for all that is good in the anime world.I have just proven how false this is.In my experience, Jojo's Bizarre Adventure fans (virgins, teenagers, and manchildren) are much less helpful than the alternative.<br>If you want nice fight scenes, watch Dragon Ball Z or One Punch Man.If you like music, K - ON.If you prefer, Clannad or Anohana.But please, don't feed the idiot magnet that is Jojo's Bizarre Adventure!");
+    }
+}
 
 
