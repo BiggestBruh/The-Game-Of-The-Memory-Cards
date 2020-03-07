@@ -30,9 +30,9 @@
         sizesmal.appendChild(textsmal);
         sizemed.appendChild(textmed);
         sizelarg.appendChild(textlarg);
-        document.body.appendChild(sizesmal);
-        document.body.appendChild(sizemed);
-        document.body.appendChild(sizelarg);
+        document.getElementById("RV1G-atminas-spele").appendChild(sizesmal);
+        document.getElementById("RV1G-atminas-spele").appendChild(sizemed);
+        document.getElementById("RV1G-atminas-spele").appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
         };
@@ -51,14 +51,13 @@ function generate(w, h){
         for (let tempw=0; tempw<w; tempw++){
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
-            pic.style.width = "10%";
-            pic.style.height = "15%";
+            pic.style.width = "100px";
+            pic.style.height = "150px";
             pic.style.margin = "25px";
             divs.appendChild(pic);
             document.getElementById("RV1G-atminas-spele").appendChild(divs);
             }
         }
-        
     }
 
 function sizeup(){
