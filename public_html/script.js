@@ -108,5 +108,15 @@ function match(){
     }
 }
 
+function testClass(elem) {
+    let value;
+    for (let i = 0; i < picset.length; i++) {
+        if (elem.classList.contains(picset[i])) {
+            value = picset[i];
+        }
+    }
+    return value;
+}
+
 
 
