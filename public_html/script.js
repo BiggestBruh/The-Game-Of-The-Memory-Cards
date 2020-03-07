@@ -17,6 +17,7 @@
     ];
     
     window.addEventListener("load", function() {
+        generate(4, 3);
         let sizesmal = document.createElement("BUTTON");
         sizesmal.setAttribute("class", "sbutton");
         let sizemed = document.createElement("BUTTON");
