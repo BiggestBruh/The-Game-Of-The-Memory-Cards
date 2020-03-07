@@ -57,7 +57,7 @@ function generate(w, h){
             pic.style.height = "15%";
             pic.style.margin = "25px";
             divs.appendChild(pic);
-            document.getElementById("forma").appendChild(divs);
+            document.getElementById("RV1G-atminas-spele").appendChild(divs);
             }
         }
         
