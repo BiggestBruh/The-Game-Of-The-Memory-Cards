@@ -43,7 +43,7 @@ function generate(w, h){
             pic.src = "img/RV1G.png";
             pic.style = "width:100px; height:100px";
             let image = document.createElement("IMG");
-            image.src = "img/" + pics[index] + ".jpg";
+            image.src = "img/" + pics[index] + ".png";
             image.style = "width:100px; height:100px";
             innercard.addEventListener('click', function () {
                 let cond = document.getElementsByClassName('flipped');
