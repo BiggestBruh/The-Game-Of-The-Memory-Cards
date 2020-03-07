@@ -44,7 +44,6 @@
     });
 
 function generate(w, h){
-    let board = document.getElementsByClassName("RV1G-atminas-spele")();
     for (let temph=0; temph<h; temph++){
         let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
         for (let tempw=0; tempw<w; tempw++){
