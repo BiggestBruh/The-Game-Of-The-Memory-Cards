@@ -39,7 +39,7 @@ function generate(w, h){
             let innercard = document.createElement("DIV"); innercard.setAttribute("class", "flipinner");
             innercard.classList.add(pics[index].substring(0, pics[index].length - 1));
             let backcard = document.createElement("DIV"); backcard.setAttribute("class", "flipback");
-            let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flip-card-front");
+            let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flipfront");
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
             pic.style = "width:100px; height:100px";
