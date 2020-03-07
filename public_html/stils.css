@@ -1,0 +1,41 @@
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #061AB2;
+}
+
+.RV1G-atminas-spele {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.mugura,
+.prieksa {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+}
+
+
+
+
+.card {
+  width: 100px;
+  height: 150px;
+  margin: 25px;
+  position: relative;
+  
+}
