@@ -1,5 +1,5 @@
-    var i=4;
-    var j=3;
+    var i;
+    var j;
     
     const picset = [
         "a",
@@ -20,27 +20,34 @@
     ];
     
     window.addEventListener("load", function() {
-        let buttonup = document.createElement("BUTTON");
-        let buttondown = document.createElement("BUTTON");
-        let textup = document.createTextNode("Bigger");
-        let textdown = document.createTextNode("Smaller");
-        buttonup.appendChild(textup);
-        buttondown.appendChild(textdown);
-        document.body.appendChild(buttonup);
-        document.body.appendChild(buttondown);
-        buttonup.onclick=()=>{
-        sizeup();
+        let sizesmal = document.createElement("BUTTON");
+        let sizemed = document.createElement("BUTTON");
+        let sizelarg = document.createElement("BUTTON");
+        let textsmal = document.createTextNode("4 x 3");
+        let textmed = document.createTextNode("5 x 4");
+        let textlarg = document.createTextNode("6 x 5");
+        sizesmal.appendChild(textsmal);
+        sizemed.appendChild(textmed);
+        sizelarg.appendChild(textlarg);
+        document.body.appendChild(sizesmal);
+        document.body.appendChild(sizemed);
+        document.body.appendChild(sizelarg);
+        sizesmal.onclick=()=>{
+        generate(4, 3);
         };
-        buttondown.onclick=()=>{
-        sizedown();
+        sizemed.onclick=()=>{
+        generate(5, 4);
         };
-        generate();
+        sizelarg.onclick=()=>{
+        generate(6, 5);
+        };
     });
 
-function generate(){
-    for (let tempj=0; tempj<j; tempj++){
+function generate(w, h){
+    let board = document.getElementsByClassName("RV1G-atminas-spele")();
+    for (let temph=0; temph<h; temph++){
         let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
-        for (let tempi=0; tempi<i; tempi++){
+        for (let tempw=0; tempw<w; tempw++){
             let pic = document.createElement("IMG");
             pic.src = "img/RV1G.png";
             pic.style.width = "10%";
