@@ -30,9 +30,9 @@
         sizesmal.appendChild(textsmal);
         sizemed.appendChild(textmed);
         sizelarg.appendChild(textlarg);
-        document.getElementById("RV1G-atminas-spele").appendChild(sizesmal);
-        document.getElementById("RV1G-atminas-spele").appendChild(sizemed);
-        document.getElementById("RV1G-atminas-spele").appendChild(sizelarg);
+        document.getElementById("setup").appendChild(sizesmal);
+        document.getElementById("setup").appendChild(sizemed);
+        document.getElementById("setup").appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
         };
