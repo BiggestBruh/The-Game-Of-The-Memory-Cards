@@ -25,12 +25,12 @@ function generate(w, h){
     for (let temph=0; temph<h; temph++){
         let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
         for (let tempw=0; tempw<w; tempw++){
-//            let pic = document.createElement("IMG");
+            let pic = document.createTextNode("IMG");
 //            pic.src = "img/RV1G.png";
 //            pic.style.width = "100px";
 //            pic.style.height = "150px";
 //            pic.style.margin = "25px";
-//            divs.appendChild(pic);
+            divs.appendChild(pic);
             document.getElementById("atminas-spele").appendChild(divs);
             }
         }
