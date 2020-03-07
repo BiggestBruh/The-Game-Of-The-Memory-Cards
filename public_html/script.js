@@ -34,17 +34,16 @@
         document.body.appendChild(sizelarg);
         sizesmal.onclick=()=>{
         generate(4, 3);
-        sizesmal.setAttribute("disabled");
+        let el = document.getElementsByClassName('sbutton');
+        el.remove();
         };
         sizemed.onclick=()=>{
         generate(5, 4);
-        let el = document.getElementByClassName("sbutton");
-        el.removeChild();
+        
         };
         sizelarg.onclick=()=>{
         generate(6, 5);
-        let el = document.getElementByClassName("sbutton");
-        el.removeChild();
+        
         };
     });
 
