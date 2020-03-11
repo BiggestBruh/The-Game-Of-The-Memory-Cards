@@ -1,41 +1,59 @@
-{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 body {
-  height: 100vh;
-  display: flex;
   background: #061AB2;
 }
 
-.RV1G-atminas-spele {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+.flip {
+  float: left;
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
   perspective: 1000px;
+  padding: 5px;
 }
 
-.mugura,
-.prieksa {
+.flipinner {
   width: 100%;
   height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  background: #1C7AAA;
+  position: relative;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.flipinner.flipped {
+  transform: rotateY(180deg);
+}
+.flipinner.fixed {
+  transform: rotateY(180deg);
+}
 
+.flipfront, .flipback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
+.flipfront {
+  background-color: #333;
 
-.card {
-  width: 100px;
-  height: 150px;
-  margin: 25px;
-  position: relative;
-  
+}
+
+.flipback {
+  transform: rotateY(180deg);
 }
