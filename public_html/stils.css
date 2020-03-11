@@ -13,6 +13,8 @@
 }
 body {
   background: #061AB2;
+  display: flex;
+  
 }
 
 .flip {
