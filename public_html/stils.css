@@ -1,4 +1,3 @@
-
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -13,8 +12,6 @@
 }
 body {
   background: #061AB2;
-  display: flex;
-  
 }
 
 .flip {
@@ -58,4 +55,8 @@ body {
 
 .flipback {
   transform: rotateY(180deg);
+}
+
+.rinda {
+  display: flex;
 }
