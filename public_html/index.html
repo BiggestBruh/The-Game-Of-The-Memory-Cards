@@ -6,81 +6,27 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>memoery card game for special snowflakes</title>
+        <title>memorey card game for special snowflakes</title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
         <link rel="stylesheet" href="stils.css">
     </head>
-    <body>
+    <body onload = "generate(4, 3)">
         
-        <button onclick="expand()">Pievienot rindu</button>
-        <form id="forma"></form>
-       
-        <section class="RV1G-atminas-spele">
-            <div class="card" data-framework="straupmanis">
-                <img class="mugura" src="img/RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/straupmanis1.jpg" alt="STRAUPMANIS">
+        <div class="navbar">
+        <a style="font-size: 20px; padding-top: 16px;">RV1G Memory Game</a>
+            <div class="setup" style="float:right">
+                <button class="sbutton" style = "margin: 16px" onclick="generate(4,3)">4 x 3
+                </button>
+                <button class="mbutton" style = "margin: 16px" onclick="generate(5,4)">5 x 4
+                </button>
+                <button class="lbutton" style = "margin: 16px" onclick="generate(6,5)">6 x 5
+                </button>
             </div>
+        </div>
+        <div id="atminas-spele">
             
-            <div class="card" data-framework="straupmanis">
-                <img class="mugura" src="img/RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/straupmanis2.gif" alt="STRAUPMANIS">
-            </div>
-            
-            <div class="card" data-framework="brasla">
-                <img class="mugura" src="img/RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/brasla1.jpg" alt="BRASLA">
-            </div>
-            
-              <div class="card" data-framework="brasla">
-                <img class="mugura" src="img/RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/brasla2.jpeg" alt="BRASLA">
-            </div>
-            
-            <div class="card" data-framework="ecis">
-                <img class="mugura" src="img/RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/ecis1.jpg" alt="ECIS">
-            </div>
-            
-            <div class="card" data-framework="ecis">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/ecis2.jfif" alt="ECIS">
-            </div>
-            
-            <div class="card" data-framework="stiepins">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/stiepins1.jfif" alt="STIEPINS">
-            </div>
-            
-            <div class="card" data-framework="stiepins">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/stiepins2.jpg" alt="STIEPINS">
-            </div>
-            
-            <div class="card" data-framework="liesma">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/liesma1.jfif" alt="LIESMA">
-            </div>
-            
-             <div class="card" data-framework="liesma">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/liesma2.png" alt="LIESMA">
-            </div>
-            
-            <div class="card" data-framework="luse">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/luse1.png" alt="LUSE">
-            </div>
-            
-            <div class="card" data-framework="luse">
-                <img class="mugura" src="RV1G.png" alt="LOGO">
-                <img class="prieksa" src="img/luse2.jpg" alt="LUSE">
-            </div>
-            
-            
-            
-            
-             </section>    
+        </div>
        
         
         
