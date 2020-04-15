@@ -1,5 +1,49 @@
 var blocks;
 
+var beginDate = new Date().getTime();
+var nowDate;
+var hours;
+var minutes;
+var seconds;
+
+var beginTimer = (function() {
+    return function() {
+        if (!gameBegun) {
+            gameBegun = true;
+            beginDate = new Date().getTime();
+            timeElapsed = setInterval(timeFunction, 1000);
+        }
+    };
+})();
+
+var stopTimer = (function() {
+    return function() {
+            gameBegun = false;
+            clearInterval(timeElapsed);
+    };
+})();
+
+//-------------------------------------------
+var timeElapsed = setInterval(timeFunction, 1000);
+
+function timeFunction(){
+    if (gameBegun){
+        nowDate = new Date().getTime();
+
+        passed = nowDate - beginDate;
+
+        var hours = Math.floor((passed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((passed % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((passed % (1000 * 60)) / 1000);
+
+        var displayTime = ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
+
+        document.getElementById("clock").innerHTML = displayTime;
+    }
+}
+
+//-------------------------------------------
+
 const picset = [
         "a",
         "b",
@@ -18,7 +62,7 @@ const picset = [
         "o"
     ];
     let pics = [];
-    
+
 function shuffle(array) {
     var ci = array.length, tv, ri;
 
@@ -35,13 +79,15 @@ function shuffle(array) {
 }
 
 function generate(w, h){
+    document.getElementById("clock").innerHTML = "00:00:00";
+    gameBegun = false;
     blocks = h*w;
     golbalh = h;
     globalw = w;
     pics = [];
     let ps = picset.slice(0);
      for (let i = 0; i < w*h / 2; i++) {
-         
+
         let r = Math.floor(Math.random() * ps.length);
         pics.push(ps[r] + "1");
         pics.push(ps[r] + "2");
@@ -60,12 +106,13 @@ function generate(w, h){
             let backcard = document.createElement("DIV"); backcard.setAttribute("class", "flipback");
             let frontcard = document.createElement("DIV"); frontcard.setAttribute("class", "flipfront");
             let pic = document.createElement("IMG");
-            pic.src = "img/RV1G.png";
+            pic.src = "/static/images/back.png";
             pic.style = "width:100%; height:100%";
             let image = document.createElement("IMG");
-            image.src = "img/" + pics[index] + ".png";
+            image.src = "/static/images/" + pics[index] + ".png";
             image.style = "width:100%; height:100%";
             innercard.addEventListener('click', function () {
+                    beginTimer();
                 let cond = document.getElementsByClassName('flipped');
                 if(!innercard.classList.contains('flipped') && !innercard.classList.contains('fixed') && cond.length<2) {
                     innercard.classList.toggle('flipped');
@@ -79,15 +126,16 @@ function generate(w, h){
             card.appendChild(innercard);
             divs.appendChild(card);
             index++;
-            
+
             document.getElementById("atminas-spele").appendChild(divs);
         }
     }
 }
 
 function match(){
+
     let flips = document.getElementsByClassName("flipped");
-    
+
     if (flips.length > 1) {
         let meme = testClass(flips[0]);
         let pair = document.getElementsByClassName(meme);
@@ -126,5 +174,7 @@ function checkWin() {
     const guessed = document.getElementsByClassName('fixed');
     if(guessed.length == blocks) {
         alert("I hate Jojo's Bizarre Adventure. I immediately lose respect for anyone who watches it, and especially those who praise it. Here's why:Name 20 successful people that watches it.Popular series basically run the show when it comes to anime.This includes shows like Dragon Ball Z, Bleach, Sailor Moon, Death Note, Attack On Titan, Sword Art Online, Love Live!, Nichijou, Clannad et al.Popular series has shows making significant contributions to the entire anime industry.Jojo's Bizarre Adventure on the other hand pulls most of the heavy weight packaging from teenage angst with each season. They then lay basic fight scenes and a joke of a protagonist on it. It generally lags behind popular series by a mile or two in inventiveness. I never seen the show on TV or been mentioned by anyone over the age of 25.So tell me again, how exactly do Jojo's Bizarre Adventure innovate? It's team even struggle to release a new theme with each season, and character design is about the only original thing with this show.Yes, Jojo's Bizarre Adventure is stable because they are standing on the shoulders of socially awkward teenagers. Most of the hard work is hashed out before it's creators ever start making anime.This is fine, and what anime is all about, but I prefer to be in with the leaders rather than the followers.What really irks me and what has really brewed my hatred are Jojo's Bizarre Adventure fans. They seem to think Jojo's Bizarre Adventure is responsible for all that is good in the anime world.I have just proven how false this is.In my experience, Jojo's Bizarre Adventure fans (virgins, teenagers, and manchildren) are much less helpful than the alternative.If you want nice fight scenes, watch Dragon Ball Z or One Punch Man.If you like music, K - ON.If you prefer, Clannad or Anohana.But please, don't feed the idiot magnet that is Jojo's Bizarre Adventure!");
+        stopTimer();
     }
 }
+
