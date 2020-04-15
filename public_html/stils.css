@@ -1,17 +1,24 @@
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #3E3D54;
 }
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 32px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+
+.setup{
+    padding: 8px 8px;
+    float: right;
+    display: flex;
+}
+
 body {
-  background: #061AB2;
+  background: #120D77;
 }
 
 .flip {
@@ -59,4 +66,16 @@ body {
 
 .rinda {
   display: flex;
+}
+
+#timer {
+    overflow: hidden;
+    float: left;
+    background-color: #3E3D54;
+}
+
+#timer p {
+    font-size: 32px;
+    color: white;
+    padding: 5px 15px;
 }
